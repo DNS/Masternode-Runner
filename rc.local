@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+# copy to:  /etc/rc.local
+
+/root/firo/bin/firod -daemon -dbcache=50 -datadir=/root/.firo
+/root/firod-restarter.sh
+/root/firod-updater-loop.sh
+
+exit 0
